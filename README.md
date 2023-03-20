@@ -12,7 +12,7 @@ Prueba Tecnica Springboot German Macias Cano
 - Mockito
 
 ## Clonar el proyecto:
-git clone https://github.com/
+git clone https://github.com/germacias/api-gmc.git
 
 ## Ejectuar el proyecto
 mvn spring-boot:run
