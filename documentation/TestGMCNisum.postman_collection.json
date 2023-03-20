@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "65e2f029-7a57-4348-ad3b-f41fedc4b533",
+		"name": "TestGMCNisum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13703354"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnZXJtYWNpYXNAZ21haWwuY29tIiwiZXhwIjoxNjgxNzg4MDcxLCJuYW1lIjoiR0VSTUFOIE1BQ0lBUyBDQU5PIiwiZW1haWwiOiJnZXJtYWNpYXNAZ21haWwuY29tIn0.Nflm44qcHgXyWjo_81ouyEELi50G3aZz0exQMkXDiSmbB-EijH6_BCx7XTdTwfXOFykxLhb4hX7cFMxJdU3ncA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Fernando Manzanares\",\r\n  \"email\": \"ferManza@hotmail.com\",\r\n  \"password\": \"Fernando2*\",\r\n  \"phones\": [\r\n    {\r\n      \"number\": \"2226423\",\r\n      \"cityCode\": \"25\",\r\n      \"countryCode\": \"+505\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gmc-api/v1/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gmc-api",
+						"v1",
+						"user",
+						"register"
+					]
+				},
+				"description": "Endpoint para registrar usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"germacias@gmail.com\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gmc-api/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gmc-api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnZXJtYWNpYXNAZ21haWwuY29tIiwiZXhwIjoxNjgxNzg4MDcxLCJuYW1lIjoiR0VSTUFOIE1BQ0lBUyBDQU5PIiwiZW1haWwiOiJnZXJtYWNpYXNAZ21haWwuY29tIn0.Nflm44qcHgXyWjo_81ouyEELi50G3aZz0exQMkXDiSmbB-EijH6_BCx7XTdTwfXOFykxLhb4hX7cFMxJdU3ncA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gmc-api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gmc-api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
